@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Alphabetical Order Example</title>
+</head>
+<body>
+<h1>Alphabetical Order Example</h1>
+<p>Enter a string:</p>
+<input type="text" id="inputString">
+<button type="button" onclick="sortAlphabetically()">Sort</button>
+<p>Sorted string:</p>
+<p id="sortedResult"></p>
+<script>
+function sortAlphabetically() {
+ var inputElement = document.getElementById("inputString");
+ var sortedResultElement = document.getElementById("sortedResult");
+ var inputString = inputElement.value;
+ var sortedString = sortStringAlphabetically(inputString);
+ sortedResultElement.innerHTML = sortedString;
+}
+function sortStringAlphabetically(str) {
+ return str.split('').sort().join('');
+}
+</script>
+</body>
+</html>
+
